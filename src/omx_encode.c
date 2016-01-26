@@ -319,7 +319,7 @@ int encode_do(struct enc_handle *handle, void *ibuf, int ilen, void **pobuf,
 	OMX_BUFFERHEADERTYPE *buf;
 
 	buf = ilclient_get_input_buffer(handle->video_encode, OMX_VIDENC_INPUT_PORT,
-			1);
+			0);
 	if (buf == NULL)
 	{
 		printf("!!! no buffers for me!\n");
